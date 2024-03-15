@@ -1,3 +1,6 @@
+<!-- 2) Write a PHP program to accept two strings from user and check whether entered 
+strings are matching or not. (Use sticky formconcept). -->
+
 <!DOCTYPE html>
 <html>
 

@@ -2,8 +2,7 @@
 selected information on page. (Use multi-valuedparameter),.
  -->
 
-<!-- 2) Write PHP program to accept user details such as user-id, name, Address, email, and mobile 
-no. Display same information on next page. -->
+
 
 <!DOCTYPE html>
 <html lang="en">

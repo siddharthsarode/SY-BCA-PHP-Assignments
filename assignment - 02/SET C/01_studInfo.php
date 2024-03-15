@@ -1,3 +1,7 @@
+<!-- 1) Write PHP program to accept name of student , Gender(male ,female ) using radio buttons
+,Qualification(SSC, HSC, BCA, MCA) using check boxes . Display information of student. 
+(Use sticky multi-valued parameter). -->
+
 <!DOCTYPE html>
 <html>
 
@@ -13,42 +17,35 @@
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name"
-                    value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+                <input type="text" class="form-control" id="name" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
             </div>
             <div class="form-group">
                 <label>Gender:</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="male" value="male"
-                        <?php if (isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked'; ?>>
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" <?php if (isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked'; ?>>
                     <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="female" value="female"
-                        <?php if (isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked'; ?>>
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" <?php if (isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked'; ?>>
                     <label class="form-check-label" for="female">Female</label>
                 </div>
             </div>
             <div class="form-group">
                 <label>Qualification:</label><br>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="qualification[]" id="ssc" value="SSC"
-                        <?php if (isset($_POST['qualification']) && in_array('SSC', $_POST['qualification'])) echo 'checked'; ?>>
+                    <input class="form-check-input" type="checkbox" name="qualification[]" id="ssc" value="SSC" <?php if (isset($_POST['qualification']) && in_array('SSC', $_POST['qualification'])) echo 'checked'; ?>>
                     <label class="form-check-label" for="ssc">SSC</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="qualification[]" id="hsc" value="HSC"
-                        <?php if (isset($_POST['qualification']) && in_array('HSC', $_POST['qualification'])) echo 'checked'; ?>>
+                    <input class="form-check-input" type="checkbox" name="qualification[]" id="hsc" value="HSC" <?php if (isset($_POST['qualification']) && in_array('HSC', $_POST['qualification'])) echo 'checked'; ?>>
                     <label class="form-check-label" for="hsc">HSC</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="qualification[]" id="bca" value="BCA"
-                        <?php if (isset($_POST['qualification']) && in_array('BCA', $_POST['qualification'])) echo 'checked'; ?>>
+                    <input class="form-check-input" type="checkbox" name="qualification[]" id="bca" value="BCA" <?php if (isset($_POST['qualification']) && in_array('BCA', $_POST['qualification'])) echo 'checked'; ?>>
                     <label class="form-check-label" for="bca">BCA</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="qualification[]" id="mca" value="MCA"
-                        <?php if (isset($_POST['qualification']) && in_array('MCA', $_POST['qualification'])) echo 'checked'; ?>>
+                    <input class="form-check-input" type="checkbox" name="qualification[]" id="mca" value="MCA" <?php if (isset($_POST['qualification']) && in_array('MCA', $_POST['qualification'])) echo 'checked'; ?>>
                     <label class="form-check-label" for="mca">MCA</label>
                 </div>
             </div>
